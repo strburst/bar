@@ -34,8 +34,7 @@ Force docking without asking the window manager. This is needed if the window ma
 
 =item B<-f> I<font>
 
-Define the font to load into one of the five slots (the number of slots is hardcoded and can be tweaked by
-changing the MAX_FONT_COUNT parameter in the source code).
+Define the font to load into one of the five slots (the number of slots is hardcoded and can be tweaked by changing the MAX_FONT_COUNT parameter in the source code).
 
 =item B<-a> I<number>
 
@@ -43,7 +42,7 @@ Set number of clickable areas (default is 10)
 
 =item B<-p>
 
-Make the bar permanent, don't exit after the standard input is closed.
+Make the bar permanent; don't exit after the standard input is closed.
 
 =item B<-n> I<name>
 
@@ -51,11 +50,11 @@ Set the WM_NAME atom value for the bar.
 
 =item B<-u> I<pixel>
 
-Sets the underline width in pixels. The default is 1.
+Set the underline width in pixels. The default is 1.
 
 =item B<-B> I<color>
 
-Set the background color of the bar. I<color> must be specified in the hex format (#aarrggbb, #rrggbb, #rgb). If no compositor such as compton or xcompmgr is running the alpha channel is silently ignored.
+Set the background color of the bar. I<color> must be specified in the hex format (#aarrggbb, #rrggbb, #rgb). If no compositor such as compton or xcompmgr is running, the alpha channel is silently ignored.
 
 =item B<-F> I<color>
 
@@ -69,7 +68,7 @@ Set the underline color of the bar. Accepts the same color formats as B<-B>.
 
 =head1 FORMATTING
 
-lemonbar provides a screenrc-inspired formatting syntax to allow full customization at runtime. Every formatting block is opened with B<%{> and closed by B<}> and accepts the following commands, the parser tries it's best to handle malformed input.
+lemonbar provides a screenrc-inspired formatting syntax to allow full customization at runtime. Every formatting block is opened with B<%{> and closed with B<}> and accepts the following commands. The parser tries its best to handle malformed input.
 
 =over
 
@@ -79,15 +78,15 @@ Swap the current background and foreground colors.
 
 =item B<l>
 
-Aligns the following text to the left side of the screen.
+Align the following text to the left side of the screen.
 
 =item B<c>
 
-Aligns the following text to the center of the screen.
+Align the following text to the center of the screen.
 
 =item B<r>
 
-Aligns the following text to the right side of the screen.
+Align the following text to the right side of the screen.
 
 =item B<B>I<color>
 
@@ -111,7 +110,7 @@ Create a clickable area starting from the current position, when the area is cli
 
 Eg. I<%{A:reboot:} Click here to reboot %{A}>
 
-The I<button> field is optional, it defaults to the left button, and it's a number ranging from 1 to 5 which maps to the left, middle, right, scroll up and scroll down movements. Your mileage may vary.
+The I<button> field is optional. It defaults to the left button, and is a number ranging from 1 to 5 which maps to the left, middle, right, scroll up and scroll down movements. Your mileage may vary.
 
 Nested clickable areas can trigger different commands.
 
@@ -173,7 +172,7 @@ Draw a line under the text.
 
 =head1 OUTPUT
 
-Clicking on an area makes lemonbar output the command to stdout, followed by a newline, allowing the user to pipe it into a script, execute it or simply ignore it. Simple and powerful, that's it.
+Clicking on an area makes lemonbar output the command to stdout, followed by a newline, allowing the user to pipe it into a script, execute it or simply ignore it. Simple and powerful; that's it.
 
 =head1 WWW
 
@@ -187,4 +186,4 @@ Xinerama support was kindly contributed by Stebalien
 
 RandR support was kindly contributed by jvvv
 
-Clickable areas support was heavily based off u-ra contribution
+Support for clickable areas was heavily based off a u-ra contribution
